@@ -16,7 +16,7 @@ function App() {
   });
 
   const connectWallet = async () => {
-    const contractAddress = "0xBf8B5Da09D43365de5de03e19F9B28782CC5f44c";
+    const contractAddress = "0x1e965Ed5C8830A6425125c80972a195Ab3556FfC";
     const contractABI = abi.abi;
     try {
       if (typeof window.ethereum !== 'undefined') {
@@ -64,13 +64,13 @@ function App() {
 
   }, []);
 
-  const router = createBrowserRouter([ 
+  const router = createBrowserRouter([
     {
       path: "/", element: <Routerr state={state} />,
       children: [
         { path: "", element: <Home /> },
-        { path: "/view-campaign", element: <ViewCampaign state={state}/> },
-        {path: "/new-season", element:<Candidates state={state}/>}
+        { path: "/view-campaign", element: <ViewCampaign state={state} /> },
+        { path: "/new-season", element: <Candidates state={state} /> }
       ]
     },
   ]);

@@ -6,10 +6,13 @@ require("dotenv").config();
 const SEPOLIA_URL = process.env.SEPOLIA_URL;
 const PRIVATE_KEY = process.env.SEPOLIA_KEY;
 
+
+
+
 module.exports = {
   solidity: "0.8.24",
-  networks:{
-    sepolia:{
+  networks: {
+    sepolia: {
       url: SEPOLIA_URL,
       accounts: [PRIVATE_KEY],
     },

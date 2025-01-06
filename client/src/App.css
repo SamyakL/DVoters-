@@ -1,4 +1,4 @@
-.navbar{
+.navbar {
     background-color: #111115;
     height: 105px;
     display: flex;
@@ -6,46 +6,58 @@
     border-radius: 2%;
     width: 100%;
 }
-.navimg{
+
+.navimg {
     padding-left: 75px;
     height: 100%;
 }
-.loginImage{
+
+.loginImage {
     display: flex;
     margin-left: auto;
     margin-top: 17px;
     height: 70%;
 }
-.navitem{
-margin-left: auto;
-padding-top: 20px;
+
+.navitem {
+    margin-left: auto;
+    padding-top: 20px;
 }
-.navadd{
+
+.navadd {
     color: aliceblue;
     display: flex;
     margin-left: auto;
     margin-top: 17px;
     height: 70%;
 }
-.Body{
+
+.Body {
     position: relative;
     padding-top: 80px;
     height: calc(100vh - 105px);
     width: 100%;
-    overflow: hidden; /* Ensure the background doesn't overflow */
+    overflow: hidden;
+    /* Ensure the background doesn't overflow */
 }
+
 /* 11111f# */
-.cButton{
+.cButton {
     width: 16rem;
     height: 3rem;
-    color: rgb(255, 255, 255); /* Text color */
+    color: rgb(255, 255, 255);
+    /* Text color */
     cursor: pointer;
-    background-color: black ; /* Button background color */
-    border: none; /* Remove default border */
-    border-radius: 0.5rem; /* Optional: add border radius */
+    background-color: black;
+    /* Button background color */
+    border: none;
+    /* Remove default border */
+    border-radius: 0.5rem;
+    /* Optional: add border radius */
     font-size: 1rem;
-    opacity: 0.9 ;
+    opacity: 0.9;
 }
+
 .backgroundImage {
     position: absolute;
     top: 0;
@@ -56,22 +68,28 @@ padding-top: 20px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.1; /* Adjust the opacity of the background image */
-    z-index: -1; /* Ensure the background image stays behind the content */
+    opacity: 0.1;
+    /* Adjust the opacity of the background image */
+    z-index: -1;
+    /* Ensure the background image stays behind the content */
 }
 
 .forButton {
     opacity: 0.9;
     display: flex;
     padding-top: 5%;
-    padding-left: 10%;/* Center the button horizontally */
-    align-items: center; /* Center the button vertically */
-    height: 100%; /* Ensure it takes the full height of its parent */
+    padding-left: 10%;
+    /* Center the button horizontally */
+    align-items: center;
+    /* Center the button vertically */
+    height: 100%;
+    /* Ensure it takes the full height of its parent */
     position: relative;
     z-index: 1;
-  }
-.campaignCard{
-    height:auto;
+}
+
+.campaignCard {
+    height: auto;
     display: flex;
     flex-direction: column;
     width: 450px;
@@ -80,66 +98,84 @@ padding-top: 20px;
     margin-top: 50px;
     margin-left: 50px;
 }
-.cardText{
-    color:rgb(28, 26, 26);
+
+.cardText {
+    color: rgb(28, 26, 26);
     align-items: center;
     margin-left: 15px;
 }
-.noSeason{
+
+.noSeason {
     border-radius: 4%;
-    height: auto; /* Set the height of your rectangle */
-    width: 360px; /* Set the width of your rectangle */
-    margin: auto; /* This will center the div horizontally */
+    height: auto;
+    /* Set the height of your rectangle */
+    width: 360px;
+    /* Set the width of your rectangle */
+    margin: auto;
+    /* This will center the div horizontally */
     background-color: rgba(71, 3, 148, 0.372);
-    color:rgba(73, 237, 255, 0.952) ;
+    color: rgba(73, 237, 255, 0.952);
     margin-top: 120px;
 }
-.campaignDetails{
+
+.campaignDetails {
 
     display: flex;
     margin-top: 120px;
-    height: auto; 
+    height: auto;
     width: auto;
     background-color: rgba(151, 67, 248, 0.372);
-    justify-content: center; /* Center the children horizontally */
-    align-items: flex-start; /* Align the children at the start vertically */
-    gap: 20px; /* Add space between the children */
-    
+    justify-content: center;
+    /* Center the children horizontally */
+    align-items: flex-start;
+    /* Align the children at the start vertically */
+    gap: 20px;
+    /* Add space between the children */
+
 }
-.candidates, .voters {
+
+.candidates,
+.voters {
     display: flex;
     margin-top: 20px;
-    height: auto;   
-    background-color: rgba(244, 49, 49, 0.774);
-    padding: 10px; /* Add some padding for better appearance */
-    box-sizing: border-box; /* Ensure padding and border are included in the width/height */
+    height: auto;
+    width: auto;
+    background-color: rgba(238, 116, 116, 0.774);
+    padding: 10px;
+
 }
-.vote{
+
+.vote {
     margin-top: 80px;
     align-items: flex-start;
+
 }
-label{
+
+label {
     color: rgba(228, 178, 14, 0.712);
 }
-.voteButton{
+
+.voteButton {
     color: #090909;
-  padding: 0.7em 1.7em;
-  font-size: 18px;
-  border-radius: 0.5em;
-  background: #e8e8e8;
-  cursor: pointer;
-  border: 1px solid #e8e8e8;
-  transition: all 0.3s;
-  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+    padding: 0.7em 1.7em;
+    font-size: 18px;
+    border-radius: 0.5em;
+    background: #e8e8e8;
+    cursor: pointer;
+    border: 1px solid #e8e8e8;
+    transition: all 0.3s;
+    box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
 }
-.resButton{
+
+.resButton {
     color: #090909;
-  padding: 0.7em 1.7em;
-  font-size: 18px;
-  border-radius: 0.5em;
-  background: #e8e8e8;
-  cursor: pointer;
-  margin-top: 20px;
-  margin-left: 650px;
+    padding: 0.7em 1.7em;
+    font-size: 18px;
+    border-radius: 0.5em;
+    background: #e8e8e8;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 650px;
 }
+
 /* rgba(8, 0, 250, 0.372); */

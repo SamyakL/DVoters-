@@ -9,6 +9,7 @@ function Candidates({ state }) {
   const [candidatesArray, setCandidatesArray] = useState([]);
   const [votersArray, setVotersArray] = useState([]);
   const [inputValue, setInputValue] = useState('');
+  const [winner, setWinner] = useState('');
 
   useEffect(() => {
     async function fetchData() {
@@ -49,7 +50,7 @@ function Candidates({ state }) {
       fetchData();
     } catch (error) {
       console.error("Error adding candidate:", error);
-      alert("Already a candidate or time is up for registrations!");
+      //alert("Already a candidate or time is up for registrations!");
     }
   }
 
@@ -62,18 +63,18 @@ function Candidates({ state }) {
       fetchData();
     } catch (error) {
       console.error("Error adding voter:", error);
-      alert("Already a voter or time is up for registrations!");
+      //alert("Already a voter or time is up for registrations!");
     }
   }
 
   async function addVote(event) {
-    event.preventDefault(); // Prevent default form submission
+    event.preventDefault();
     try {
       await contractInstance.connect(signerAddress);
       const tx = await contractInstance.addvote(inputValue.toString());
       await tx.wait();
       console.log("Vote added successfully!");
-      // Clear input field after successful vote
+
       setInputValue('');
     } catch (error) {
       console.error("Error adding vote:", error);
@@ -85,7 +86,9 @@ function Candidates({ state }) {
       await contractInstance.connect(signerAddress);
       const tx = await contractInstance.getResult();
       tx.wait();
-      console.log("Winner is:", await contractInstance.winners());
+      setWinner(await contractInstance.winners())
+      console.log("Winner is:", winner);
+      alert("The Winner is " + winner + "!!");
     } catch (error) {
       console.error("Error fetching results:", error);
     }
@@ -133,12 +136,13 @@ function Candidates({ state }) {
       </div>
       <div className='vote'>
         <form onSubmit={addVote}>
-          <label>Cast your Vote!</label>
+          <label style={{ paddingRight: 20, paddingLeft: 5 }}>Cast your Vote!</label>
           <input
             type='text'
             placeholder='Address of candidate'
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
+
           />
           <button type='submit'>Vote!</button>
         </form>
